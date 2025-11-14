@@ -1,0 +1,27 @@
+<!-- res/layout/activity_sensor.xml -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sensorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondolaberinto1888"/>
+
+    <com.example.Memori2.BallView
+        android:id="@+id/ballView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="45dp"
+        android:layout_height="48dp"
+        android:text="Menu"
+        android:background="@drawable/btnsalir"
+        android:layout_margin="10dp"
+        android:layout_gravity="top|end"/>
+</FrameLayout>
