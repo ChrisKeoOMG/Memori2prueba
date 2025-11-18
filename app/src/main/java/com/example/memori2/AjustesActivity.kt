@@ -1,4 +1,4 @@
-package com.example.Memori2
+package com.example.memori2
 
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -8,7 +8,6 @@ import android.widget.SeekBar
 import android.widget.Switch
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.memori2.R
 import android.view.View
 
 class AjustesActivity : AppCompatActivity() {

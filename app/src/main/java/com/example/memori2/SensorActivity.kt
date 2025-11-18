@@ -1,4 +1,4 @@
-package com.example.Memori2
+package com.example.memori2
 
 import android.content.Context
 import android.hardware.Sensor
@@ -9,9 +9,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.Memori2.BallView
 import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
-import com.example.memori2.R
 
 class SensorActivity : AppCompatActivity(), SensorEventListener {
 
