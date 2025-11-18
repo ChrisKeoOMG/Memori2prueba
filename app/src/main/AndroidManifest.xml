@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Memori2">
         <activity
-            android:name="com.example.Memori2.MainActivity"
+            android:name="com.example.memori2.MainActivity"
             android:screenOrientation="landscape"
             android:exported="true">
             <intent-filter>
@@ -22,11 +22,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.Memori2.SensorActivity"
+            android:name="com.example.memori2.SensorActivity"
             android:exported="true"
           />
-        <activity android:name="com.example.Memori2.AjustesActivity"
+        <activity android:name="com.example.memori2.AjustesActivity"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name="com.example.memori2.MemoryGameActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name="com.example.memori2.GameMenuActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name="com.example.memori2.MenuMemoramaActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            />
 
     </application>
 

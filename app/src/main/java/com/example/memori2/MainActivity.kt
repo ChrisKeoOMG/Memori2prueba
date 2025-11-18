@@ -1,4 +1,4 @@
-package com.example.Memori2
+package com.example.memori2
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.memori2.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
 
         btnPlay.setOnClickListener {
-            val intent = Intent(this, SensorActivity::class.java)
+            val intent = Intent(this, GameMenuActivity::class.java)
             startActivity(intent)
         }
 

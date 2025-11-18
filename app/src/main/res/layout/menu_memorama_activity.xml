@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fondo -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Fondo del juego"
+        android:src="@drawable/fondomenu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botón de Atrás en la esquina superior izquierda -->
+    <ImageButton
+        android:id="@+id/btn_atras"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Atrás"
+        android:src="@drawable/regresarbtn"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- RadioGroup para seleccionar el nivel (con texto) -->
+    <RadioGroup
+        android:id="@+id/radioGroup_niveles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_atras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/radio_nivel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nivel 1"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:checked="true"
+            android:layout_marginEnd="16dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_nivel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nivel 2"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <!-- Contenedor para los botones de juego, centrado en la pantalla -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_solitario"
+            android:layout_width="163dp"
+            android:layout_height="165dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/btn_solitario"
+            android:contentDescription="Solitario"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/btn_multijugador"
+            android:layout_width="163dp"
+            android:layout_height="165dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/btn_multijugador"
+            android:contentDescription="Multijugador"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/btn_online"
+            android:layout_width="163dp"
+            android:layout_height="165dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/btn_online"
+            android:contentDescription="Online"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
