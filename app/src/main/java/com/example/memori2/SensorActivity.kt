@@ -1,6 +1,7 @@
 package com.example.memori2
 
 import android.content.Context
+import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -21,6 +22,11 @@ class SensorActivity : AppCompatActivity(), SensorEventListener {
         super.onCreate(savedInstanceState)
 
         supportActionBar?.hide()
+        supportActionBar?.hide()
+        window.decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_FULLSCREEN or
+                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                    View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
 
         window.decorView.apply {
             systemUiVisibility = (
@@ -39,6 +45,12 @@ class SensorActivity : AppCompatActivity(), SensorEventListener {
             
         val btnMenu: ImageButton = findViewById(R.id.btnMenu)
         btnMenu.setOnClickListener {
+            val stopIntent = Intent(this, Music::class.java)
+            stopService(stopIntent)
+            val menuIntent = Intent(this, Music::class.java)
+            menuIntent.putExtra("track", "menu")
+            startService(menuIntent)
+
             finish()
         }
 
@@ -56,6 +68,9 @@ class SensorActivity : AppCompatActivity(), SensorEventListener {
         accelerometer?.also {
             sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_GAME)
         }
+        val intent = Intent(this, Music::class.java)
+        intent.putExtra("track", "laberinto")
+        startService(intent)
     }
 
     override fun onPause() {
@@ -70,6 +85,8 @@ class SensorActivity : AppCompatActivity(), SensorEventListener {
             }
         }
     }
+
+
 
 
 

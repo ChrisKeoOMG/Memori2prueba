@@ -42,6 +42,10 @@
             android:exported="true"
             android:screenOrientation="landscape"
             />
+        <activity android:name="com.example.memori2.TutorialActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <service android:name="com.example.memori2.Music"/>
 
     </application>
 

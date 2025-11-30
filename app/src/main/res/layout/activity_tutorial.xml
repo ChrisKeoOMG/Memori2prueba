@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#1A1A1A">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:text="TUTORIAL"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Modo Memorama"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:paddingTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• El objetivo es unir la figura con su palabra en inglés.\n• Toca dos tarjetas para revelarlas.\n• Si coinciden, se quedarán descubiertas.\n• Completa todas las parejas para ganar."
+            android:textSize="18sp"
+            android:textColor="#CCCCCC"
+            android:paddingTop="10dp"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/img_parmemorama"
+            android:scaleType="centerInside"
+            android:paddingTop="10dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/img_memoramacompleto_tuto"
+            android:scaleType="centerInside"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modo Laberinto"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:paddingTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Controla la bolita inclinando tu celular.\n• Evita chocar con los muros.\n• Llega al objetivo para completar el nivel.\n• Entre más rápido termines, mejor puntuación."
+            android:textSize="18sp"
+            android:textColor="#CCCCCC"
+            android:paddingTop="10dp"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/imglabejem"
+            android:scaleType="centerInside"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diviertete y si no aprendes ingles, es gratis."
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:paddingTop="30dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/btnRegresar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/regresarbtn"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_gravity="start|top"
+            android:contentDescription="Regresar" />
+
+
+
+
+    </LinearLayout>
+</ScrollView>

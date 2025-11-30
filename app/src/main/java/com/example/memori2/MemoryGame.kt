@@ -9,6 +9,8 @@ class MemoryGame(private val mode: Int, private val level: Int) {
     var currentPlayer = 0
     var scores = arrayListOf(0, 0)
 
+
+
     var modo = mode;
 
     var nivel = level;
@@ -105,4 +107,6 @@ class MemoryGame(private val mode: Int, private val level: Int) {
         cards[position2].isFlipped = false
         firstIndex = null
     }
+
+
 }

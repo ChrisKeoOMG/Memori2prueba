@@ -78,53 +78,35 @@
 
         <SeekBar
             android:id="@+id/seekbar_volume"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
-
-    <!-- Opción: Idioma -->
     <TextView
         android:id="@+id/txtIdioma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Idioma:"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        app:layout_constraintTop_toBottomOf="@id/volumeLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
         android:layout_marginTop="30dp"
-        android:gravity="center" />
-
-    <LinearLayout
-        android:id="@+id/langLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/txtIdioma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/volumeLayout" />
+
+
+    <ImageButton
+        android:id="@+id/btnAvisoPadres"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/btnavisopadres"
+        android:text="Aviso para padres"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/txtIdioma" />
 
-        <Button
-            android:id="@+id/btnEnglish"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:text="Inglés"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/btnSpanish"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:text="Español"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
-
-    <!-- Botón regresar -->
     <ImageButton
         android:id="@+id/btnRegresar"
         android:layout_width="80dp"

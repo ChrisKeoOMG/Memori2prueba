@@ -53,10 +53,11 @@ class MenuMemoramaActivity : AppCompatActivity() {
         }
 
         btnRegresar.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
+
     }
+
 
     fun obtenerNivelSeleccionado(radioGroupNiveles: RadioGroup): Int {
         val idSeleccionado = radioGroupNiveles.checkedRadioButtonId

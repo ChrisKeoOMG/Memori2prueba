@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:contentDescription="Fondo del juego"
-        android:src="@drawable/fondomenu"
+        android:src="@drawable/fondo11"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,25 +33,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- RadioGroup para seleccionar el nivel (con texto) -->
+
+    <!-- Contenedor para los botones de juego, centrado en la pantalla -->
     <RadioGroup
         android:id="@+id/radioGroup_niveles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/btn_atras"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/btn_atras">
 
         <RadioButton
             android:id="@+id/radio_nivel1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:checked="true"
             android:text="Nivel 1"
             android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:checked="true"
-            android:layout_marginEnd="16dp"/>
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radio_nivel2"
@@ -59,10 +61,9 @@
             android:layout_height="wrap_content"
             android:text="Nivel 2"
             android:textColor="@android:color/white"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </RadioGroup>
 
-    <!-- Contenedor para los botones de juego, centrado en la pantalla -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

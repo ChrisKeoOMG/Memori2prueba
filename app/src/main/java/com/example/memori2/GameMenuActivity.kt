@@ -9,9 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 class GameMenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar?.hide()  // Oculta la barra
+        supportActionBar?.hide()
 
-        //ocultar barraa
+
         window.decorView.apply {
             systemUiVisibility = (
                     View.SYSTEM_UI_FLAG_FULLSCREEN
@@ -38,9 +38,10 @@ class GameMenuActivity : AppCompatActivity() {
         }
 
         btnRegresar.setOnClickListener {
-            val intent = Intent(this, GameMenuActivity::class.java)
-            startActivity(intent)
+            finish()
         }
+
+
 
 
     }

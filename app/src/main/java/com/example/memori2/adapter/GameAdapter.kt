@@ -19,6 +19,8 @@ class GameAdapter(
 
     inner class CardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val img: ImageView = view.findViewById(R.id.cardImage)
+
+
         val txt: TextView = view.findViewById(R.id.cardText)
 
         init {

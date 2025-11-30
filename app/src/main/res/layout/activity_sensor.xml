@@ -7,7 +7,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/fondolaberinto1888"/>
+        android:background="@drawable/fondolabe"/>
 
     <com.example.Memori2.BallView
         android:id="@+id/ballView"

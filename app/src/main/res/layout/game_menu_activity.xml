@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:contentDescription="Fondo del juego"
-        android:src="@drawable/fondomenu"
+        android:src="@drawable/fondoentrejuego"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
