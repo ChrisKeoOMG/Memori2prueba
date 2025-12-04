@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
 import android.widget.RadioGroup
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MenuMemoramaActivity : AppCompatActivity() {
@@ -49,7 +48,10 @@ class MenuMemoramaActivity : AppCompatActivity() {
         }
 
         btnOnline.setOnClickListener {
-            Toast.makeText(this, "Boton de juego online", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MenuConnectionActivity::class.java)
+            val nivel = obtenerNivelSeleccionado(radioGroupNiveles)
+            intent.putExtra("nivel", nivel)
+            startActivity(intent)
         }
 
         btnRegresar.setOnClickListener {

@@ -26,7 +26,6 @@ class GameMenuActivity : AppCompatActivity() {
         val btnJugarLaberinto = findViewById<ImageButton>(R.id.btn_laberinto)
         val btnRegresar = findViewById<ImageButton>(R.id.btn_atras)
 
-
         btnJugarMemorama.setOnClickListener {
             val intent = Intent(this, MenuMemoramaActivity::class.java)
             startActivity(intent)
@@ -40,9 +39,6 @@ class GameMenuActivity : AppCompatActivity() {
         btnRegresar.setOnClickListener {
             finish()
         }
-
-
-
-
     }
+
 }

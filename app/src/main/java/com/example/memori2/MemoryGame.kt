@@ -3,17 +3,12 @@ package com.example.memori2
 import com.example.memori2.model.CardItem
 import com.example.memori2.model.CardType
 
-class MemoryGame(private val mode: Int, private val level: Int) {
+class MemoryGame(val mode: Int, val level: Int) {
 
     var cards: MutableList<CardItem> = mutableListOf()
     var currentPlayer = 0
-    var scores = arrayListOf(0, 0)
+    var scores: MutableList<Int> = mutableListOf(0, 0)
 
-
-
-    var modo = mode;
-
-    var nivel = level;
 
     private var firstIndex: Int? = null
 
@@ -38,7 +33,7 @@ class MemoryGame(private val mode: Int, private val level: Int) {
             Pair("melon", "Melon"),
         )
 
-        val numPairs = if (nivel == 2) 7 else 4 // Nivel 2: 7 pares, Nivel 1: 4 pares
+        val numPairs = if (level == 2) 7 else 4 // Nivel 2: 7 pares, Nivel 1: 4 pares
         val selectedPairs = fruits.take(numPairs)
 
         cards.clear()
@@ -95,7 +90,7 @@ class MemoryGame(private val mode: Int, private val level: Int) {
         }
 
         // no acerto - cambiar jugador solo en modo 2
-        if (mode == 2) {
+        if (mode == 2 || mode == 3) {
             currentPlayer = 1 - currentPlayer
         }
 

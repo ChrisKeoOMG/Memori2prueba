@@ -13,16 +13,13 @@ import com.example.memori2.R
 
 class GameAdapter(
     private val context: Context,
-    private val cards: List<CardItem>,
+    private val cards: MutableList<CardItem>,
     private val listener: (Int) -> Unit
 ) : RecyclerView.Adapter<GameAdapter.CardViewHolder>() {
 
     inner class CardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val img: ImageView = view.findViewById(R.id.cardImage)
-
-
         val txt: TextView = view.findViewById(R.id.cardText)
-
         init {
             itemView.setOnClickListener {
                 listener(adapterPosition)
@@ -42,10 +39,15 @@ class GameAdapter(
         if (card.isFlipped || card.isMatched) {
 
             if (card.type == CardType.IMAGE) {
-                val resId = context.resources.getIdentifier(card.content, "drawable", context.packageName)
+                val resId = context.resources.getIdentifier(
+                    card.content,
+                    "drawable",
+                    context.packageName
+                )
                 holder.img.setImageResource(resId)
                 holder.img.visibility = View.VISIBLE
                 holder.txt.visibility = View.GONE
+
             } else {
                 holder.txt.text = card.content
                 holder.txt.visibility = View.VISIBLE
@@ -60,4 +62,16 @@ class GameAdapter(
     }
 
     override fun getItemCount() = cards.size
+
+    fun updateCards(newList: List<CardItem>) {
+        cards.clear()
+        cards.addAll(newList)
+        notifyDataSetChanged()
+    }
+
+    fun updateFromRealList(source: MutableList<CardItem>) {
+        cards.clear()
+        cards.addAll(source) // no copies
+        notifyDataSetChanged()
+    }
 }

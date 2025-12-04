@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -42,9 +42,15 @@
             android:exported="true"
             android:screenOrientation="landscape"
             />
+        <activity
+            android:name="com.example.memori2.MenuConnectionActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            />
         <activity android:name="com.example.memori2.TutorialActivity"
             android:exported="false"
             android:screenOrientation="landscape"/>
+
         <service android:name="com.example.memori2.Music"/>
 
     </application>
