@@ -16,7 +16,6 @@ class Music : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
 
-        // Apagar música previa si existe
         mediaPlayer?.stop()
         mediaPlayer?.release()
         mediaPlayer = null
@@ -38,7 +37,7 @@ class Music : Service() {
         val vol = prefs.getFloat("volume", 1f)
         mediaPlayer?.setVolume(vol, vol)
 
-        // Si la música está desactivada, no reproducir
+        // Si la musica está desactivada, no reproducir
         val enabled = prefs.getBoolean("music_enabled", true)
         if (enabled) {
             mediaPlayer?.start()
@@ -56,10 +55,6 @@ class Music : Service() {
 
     override fun onBind(intent: Intent?): IBinder? = null
 
-
-    // -----------------------
-    //  CONTROL GLOBAL
-    // -----------------------
     companion object {
         private var instance: Music? = null
 
