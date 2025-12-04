@@ -42,7 +42,6 @@ class MenuConnectionActivity : AppCompatActivity() {
         // 3. Botón para CONECTAR (Cliente)
         btnConnect.setOnClickListener {
             var targetIp = etIpInput.text.toString().trim()
-            targetIp = "192.168.3.22"
             if (targetIp.isEmpty()) {
                 Toast.makeText(this, "Por favor ingresa una IP", Toast.LENGTH_SHORT).show()
             } else {
